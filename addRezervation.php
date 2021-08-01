@@ -27,26 +27,34 @@
 <body>
 <form class="rezervation" method="post" action="rezervation_check.php">
     <div class="container">
-        <h1>Rezervacija</h1>
+       <div class="header"><h1>Rezervacija</h1></div>
         <hr>
         <?php include 'selectlistGuest.php';?> <br><br>
 
-        <label><b>Datum dolaska</b></label><br>
-        <input type="date" name="dateArrival" id="dateArrival" onchange="loadListAccommodation()" style="width: 200px"><br>
-        <label><b>Datum odlaska</b></label><br>
-        <input type="date" name="dateDeparture" id="dateDeparture"  onchange="loadListAccommodation()" style="width: 200px"><br>
+        <div style="display: flex">
+            <div style="width: 50%; margin-right: 10px">
+                <input style=" background: #f1f1f1; margin-bottom: 0;" type="date" name="dateArrival" id="dateArrival" onchange="loadListAccommodation()" style="width: 200px"><br>
+                <label style="font-size: 12px; margin-top: 0px;">Datum dolaska</label>
+            </div>
+            <div style="width: 50%;">
+                <input style=" background: #f1f1f1; margin-bottom: 0;" type="date" name="dateDeparture" id="dateDeparture"  onchange="loadListAccommodation()" style="width: 200px"><br>
+                <label style="font-size: 12px; margin-top: 0px">Datum odlaska</label>
+            </div>
+        </div>
 
         <div id="listAccommodation">
 
         </div>
-        <label><b>Godine</b></label>
+
         <input type="text" placeholder="Godine" name="age" required>
 
-        <label><b>Jmbg</b></label>
         <input type="text" placeholder="Jmbg" name="jmbg" required>
 
-        <hr>
-        <input type="submit" class="rezervationbtn" value="Rezervisi">
+<!--        <hr>-->
+        <div class="button-container">
+            <input type="submit" class="rezervationbtn" value="Rezerviši">
+        </div>
+
     </div>
 </form>
 </body>

@@ -38,7 +38,7 @@ if($_SESSION['counter'] <= 6){
         $result = mysqli_query($connection, $queryImg);
     }
 }else{
-    setcookie("notification", "Smjestaj je uspjesno unijet. Nije moguce unijeti vise od 6 slika.",time() + 3600*24, "/");setcookie("notification", "Smjestaj je uspjesno unijet. Nije moguce unijeti vise od 6 slika.",time() + 3600*24, "/");
+    setcookie("notification", "Smještaj je uspješno unijet. Nije moguće učitati više od 6 slika.",time() + 3600*24, "/");setcookie("notification", "Smjestaj je uspjesno unijet. Nije moguce unijeti vise od 6 slika.",time() + 3600*24, "/");
     header("Location:indexAdmin.php");
 }
 

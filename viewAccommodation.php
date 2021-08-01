@@ -25,13 +25,20 @@ $row = mysqli_fetch_assoc($result);
         echo "apartman";
     }
     ?><br>
-    <label><b style="color:  #008CBA">Cijena:</b></label><?=$row['price']?> KM<br>
+    <label><b style="color:  #008CBA">Cijena:</b></label><?=$row['price']?> <label style="margin-right: 78px">KM</label>
     <label><b style="color:  #008CBA">Cijena sa doručkom:</b></label><?=$row['price_with_breakfast']?> KM<br>
-    <label><b style="color:  #008CBA">Cijena vikendom:</b></label><?=$row['price_weekend']?> KM<br>
+    <label><b style="color:  #008CBA">Cijena vikendom:</b></label><?=$row['price_weekend']?> KM
     <label><b style="color:  #008CBA">Cijena vikendom sa doručkom:</b></label><?=$row['price_weekend_with_breakfast']?> KM<br>
     <div class="divBtn">
+        <?php
+        if(isset($_SESSION['userAdmin']) OR isset($_SESSION['userWorker'])) {
+        ?>
         <button class="btnRezervation" id="btnRezervation" onclick="location.href='indexAdmin.php?name=addRezervation&id_accommodation='+<?=$accommodation_id?>">Rezervisi</button>
+        <?php
+        }
+        ?>
     </div>
+    <hr>
 </div>
 <div class="image">
     <?php require "viewImageAccommodation.php"; ?>

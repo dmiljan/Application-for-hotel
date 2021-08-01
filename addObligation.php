@@ -18,21 +18,26 @@
 <body>
 <form class="obligation" method="post" action="addObligation_check.php">
     <div class="container">
-        <h1>Obaveza</h1>
+        <div class="header"><h1>Obaveza</h1></div>
+
         <hr>
-        <label><b>Naziv obaveze:</b></label>
+
         <input type="text" placeholder="Naziv obaveze" name="name" required>
 
-        <label><b>Opis obaveze</b></label>
+
         <input type="text" placeholder="Opis obaveze" name="description" required>
+        <div style="display: flex">
+            <div style="width: 50%; margin-right: 10px">
+                <input style="margin-bottom: 0px;  background: #f1f1f1;" type="date" name="startDate">
+                <label style="font-size: 12px;">Datum pocetka</label>
+            </div>
+            <div  style="width: 50%;">
+                <input style="margin-bottom: 0px" type="datetime-local" name="endDateTime">
+                <label style="display:flex; font-size: 12px;">Datum i vrijeme zavrsetka</label>
+            </div>
+        </div>
 
-        <label><b>Datum pocetka</b></label><br>
-        <input type="date" name="startDate" style="width: 200px"><br><br>
-
-        <label><b>Datum zavrsetka</b></label><br>
-        <input type="datetime-local" name="endDateTime" style="width: 250px"><br><br>
-
-        <hr>
+<!--        <hr>-->
         <input type="submit" class="obligationbtn" value="Dodaj obavezu">
     </div>
 </form>

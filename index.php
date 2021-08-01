@@ -30,6 +30,8 @@ require "header.php";
 <?php include 'topNavigation.php'; ?>
 <?php include 'slideShow.php'; ?>
 
+
+
 <script>
     var btn = document.getElementById('btnLogin');
     btn.addEventListener('click', function () {

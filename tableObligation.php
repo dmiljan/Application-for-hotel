@@ -35,7 +35,7 @@ $result = mysqli_query($connection, $query);
 $counter = 0;
 
 ?>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pretraži po nazivu..">
 <table class="table table-hover" id="myTable">
     <thead>
     <tr>
@@ -53,7 +53,7 @@ $counter = 0;
             <tr>
                 <th scope="row"><?= $counter ?></th>
                 <td><?= $row['name'] ?></td>
-                <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name=obligation'?>" class="btn"><i class="fa fa-trash"></i> </a></td>
+                <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name=obligation'?>" class="btn" style="background: #9e2e2b;" ><i class="fa fa-trash"></i> </a></td>
                 <td><a href="<?='indexAdmin.php?name=viewObligation&obligationId='.$row['id']?>" class="btn">Detaljno</a></td>
             </tr>
         <?php

@@ -13,5 +13,5 @@
             </li>
         </ul>
     </div>
-    <button type="button" class="btn btn-outline-primary" id="btnLogin" >Log in</button>
+    <button style="letter-spacing: 1px; font-weight: 600;"  type="button" class="btn btn-outline-primary" id="btnLogin" >Prijavi se</button>
 </nav>

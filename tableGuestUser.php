@@ -41,14 +41,14 @@ if($userTypeId == 1){
 }
 
 ?>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pretraži po imenu i prezimenu..">
 <table class="table table-hover" id="myTable">
     <thead>
     <tr>
         <th scope="col">#</th>
         <th scope="col">Ime i prezime</th>
         <th scope="col">E-mail</th>
-        <th scope="col">Šifra</th>
+        <th scope="col">Lozinka</th>
         <?php
         if($userTypeId == 2){
             ?>
@@ -81,7 +81,7 @@ if($userTypeId == 1){
                 $name = "guest";
             }
             ?>
-            <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name='.$name.'&userTypeId='.$userTypeId?>" class="btn"><i class="fa fa-trash"></i> </a></td>
+            <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name='.$name.'&userTypeId='.$userTypeId?>" class="btn" style="background: #9e2e2b;"><i class="fa fa-trash"></i> </a></td>
         </tr>
         <?php
     }

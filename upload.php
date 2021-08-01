@@ -10,11 +10,12 @@
 
 </head>
 <body>
-<label><b>Učitaj slike:</b></label>
+<label><h3 style="color: #2789a7;">Učitaj slike:</h3></label>
 
 <form action="upload_check.php" class="dropzone">
 
 </form>
+
 <br>
 <button type="button" class="btn" id="btnHome"><i class="fa fa-home"></i> Početna</button>
 </body>

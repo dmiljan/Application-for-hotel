@@ -78,7 +78,7 @@ $counter = 0;
 
 ?>
 <div class="main">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pretraži po nazivu..">
     <?php include "searchForm.php"?>
     <table class="table table-hover" id="myTable">
         <thead>
@@ -117,9 +117,9 @@ $counter = 0;
                     <td>Apartman</td>
                     <?php
                 }
-                if(isset($_SESSION['userAdmin']) OR isset($_SESSION['userWorker'])){
+                if(isset($_SESSION['userAdmin'])){
                 ?>
-                     <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name=accommodation'?>" class="btn"><i class="fa fa-trash"></i> </a></td>
+                     <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name=accommodation'?>" class="btn" style="background: #9e2e2b;" ><i class="fa fa-trash"></i> </a></td>
                 <?php
                 }
                 ?>

@@ -29,7 +29,7 @@
             display:flex;
         }
         .row{
-            width: 400px; !important; //dodao ja
+            width: 400px; !important;
         }
         #expandedImg{
             width: 630px !important;

@@ -13,5 +13,5 @@ if(isset($_REQUEST['guestList']) and isset($_REQUEST['accommodationList']) and i
     $query = "INSERT INTO `rezervation`(`age`, `jmbg`, `date_arrival`, `date_departure`, `accommodation_id`, `user_id`, `guest_id`) 
                                    VALUES ('$age', '$jmbg', '$dateArrival', '$dateDeparture', '$accommodation_id', '$user_id', '$guest_id')";
     $result = mysqli_query($connection, $query);
-    header("Location:indexAdmin.php");
+    header("Location:indexAdmin.php?name=tableRezervation");
 }

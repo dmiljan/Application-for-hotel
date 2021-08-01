@@ -16,26 +16,23 @@
 <body>
 <form class="registration" method="post" action="registration_ckeck.php">
     <div class="container">
-        <h1>Registracija</h1>
+        <div class="header"><h1>Registracija</h1></div>
         <hr>
-        <label><b>Ime</b></label>
-        <input type="text" placeholder="Ime" name="firstname" required>
+        <div style="display: flex">
+            <input style="width: 50%; margin-right: 10px" type="text" placeholder="Ime" name="firstname" required>
+            <input style="width: 50%; " type="text" placeholder="Prezime" name="lastname" required>
+        </div>
 
-        <label><b>Prezime</b></label>
-        <input type="text" placeholder="Prezime" name="lastname" required>
-
-        <label><b>Email</b></label>
         <input type="text" placeholder="Email" name="email" required>
 
-        <label><b>Šifra</b></label>
-        <input type="password" placeholder="Šifra" name="password" required>
+       <span style="display: flex">
+            <input style="width: 50%; margin-right: 10px; background: #f1f1f1;" type="password" placeholder="Lozinka" name="password" required>
+            <input style="width: 50%; background: #f1f1f1;" type="password" placeholder="Potvrdi lozinku" name="passwordRepeat" required>
+       </span>
 
-        <label><b>Potvrdi šifru</b></label>
-        <input type="password" placeholder="Potvrdi šifru" name="passwordRepeat" required>
-
-        <div class="custom-select" style="width:200px;">
-            <select name="userList" onchange="loadNewFields(this)">
-                <option value="0"><b>Tip korisnika:</b></option>
+        <div class="custom-select" style="width:100%;">
+            <select style="background: #f1f1f1;" name="userList" onchange="loadNewFields(this)">
+                <option value="0">Tip korisnika:</option>
                 <option value="1">Administrator</option>
                 <option value="2">Radnik</option>
                 <option value="3">Gost</option>
@@ -44,8 +41,13 @@
 
         <div id="fields">
         </div>
-        <hr>
-        <input type="submit" class="registerbtn" value="Registruj">
+<!--        <hr>-->
+
+        <div class="button-container">
+            <input type="submit" class="registerbtn" value="Registruj">
+        </div>
+
+
     </div>
 </form>
 </body>

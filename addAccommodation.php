@@ -18,31 +18,27 @@
 <body>
 <form class="addAccommodation" action="addAccommodation_check.php" method="post">
 <div class="container">
-    <h1>Smještaj</h1>
+    <div class="header"><h1 >Smještaj</h1></div>
 
-    <label><b>Naziv smeštaja:</b></label>
-    <input type="text" name="nameAccommodation">
+    <hr>
 
-    <select name="listTypeAccommodation">
-        <option value="0">Tip smjestaja</option>
+    <input type="text" name="nameAccommodation" placeholder="Naziv smještaja">
+
+    <select style="background: #f1f1f1;" name="listTypeAccommodation">
+        <option value="0">Tip smještaja</option>
         <option value="1">Soba</option>
         <option value="2">Apartman</option>
     </select>
 
-    <label><b>Kapacitet:</b></label>
-    <input type="text" name="capacity">
-
-    <label><b>Cijena za radne dane:</b></label>
-    <input type="text" name="price">
-
-    <label><b>Cijena za radne dane sa doruckom:</b></label>
-    <input type="text" name="priceWithBreakfast">
-
-    <label><b> Cijena za vikend:</b></label>
-    <input type="text" name="priceWeekend">
-
-    <label><b>  Cijena za vikend sa doruckom:</b></label>
-    <input type="text" name="priceWeekendWithBreakfast">
+    <input type="text" name="capacity" placeholder="Kapacitet">
+    <div style="display: flex">
+        <input style="width: 50%; margin-right: 10px" type="text" name="price" placeholder="Cijena za radne dane">
+        <input style="width: 50%" type="text" name="priceWithBreakfast" placeholder="Cijena za radne dane sa doručkom">
+    </div>
+    <div style="display: flex">
+        <input style="width: 50%; margin-right: 10px" type="text" name="priceWeekend" placeholder="Cijena za vikend">
+        <input style="width: 50%" type="text" name="priceWeekendWithBreakfast" placeholder="Cijena za vikend sa doručkom">
+    </div>
 
     <input type="submit" class="obligationbtn" value="Dodaj smještaj">
 </div>

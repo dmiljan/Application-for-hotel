@@ -31,7 +31,7 @@ SQL;
 
     $result = mysqli_query($connection, $query);
     ?>
-    <select name="accommodationList" class="chosen" onselect="<?php  ?>">
+    <select style=" background: #f1f1f1;" name="accommodationList" class="chosen" onselect="<?php  ?>">
         <option value="0">Izaberi smještaj</option>
         <?php  while($row = mysqli_fetch_assoc($result)) {
             ?>

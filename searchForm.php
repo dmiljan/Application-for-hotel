@@ -17,22 +17,26 @@
 <button class="open-button" onclick="openForm()" >Filtriraj</button>
 <div class="form-popup" id="searchForm">
     <form action="tableAccommodation.php" class="form-container">
-        <select name="typeAccList">
+        <select style="background: #f1f1f1;" name="typeAccList">
             <option value="0">Tip smještaja</option>
             <option value="1">Soba</option>
             <option value="2">Apartman</option>
         </select>
 
-        <label><b>Datum dolaska</b></label><br>
-        <input type="date" name="dateArrival" style="width: 200px"><br><br>
+        <div style="margin-bottom: 20px">
+            <input type="date" name="dateArrival" style="margin: 0">
+            <label style="font-size: 15px;"><b>Datum dolaska</b></label>
+        </div>
 
-        <label><b>Datum odlaska</b></label><br>
-        <input type="date" name="dateDeparture" style="width: 200px"><br><br>
+        <div style="margin-bottom: 20px">
+            <input type="date" name="dateDeparture" style="margin: 0">
+            <label style="font-size: 15px"><b>Datum odlaska</b></label>
+        </div>
 
-        <label><b>Cijena:</b></label><br>
-
-        <input type="text" placeholder="Od" name="priceFrom" style="width: 100px">
-        <input type="text" placeholder="Do" name="priceTo" style="width: 100px">
+        <div style="width: 100%; display: flex">
+            <input type="text" placeholder="Cijena od" name="priceFrom" style="width: 50%; margin-right: 10px">
+            <input type="text" placeholder="Cijena do" name="priceTo" style="width: 50%">
+        </div>
 
         <input type="submit" class="btn" value="Traži">
         <input type="button" class="btn cancel"  onclick="closeForm()" value="Zatvori">

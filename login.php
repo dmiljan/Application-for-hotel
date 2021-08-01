@@ -13,16 +13,16 @@
 <body>
 <?php require 'header.php'; ?>
 <form class="login-box" action="login_check.php" method="post">
-    <h1>Log in</h1>
+    <h1>Prijava</h1>
     <div class="textbox">
         <i class="fa fa-envelope-square"></i>
         <input type="email" placeholder="E-mail" name="email">
     </div>
     <div class="textbox">
         <i class="fa fa-lock" aria-hidden="true"></i>
-        <input type="password" placeholder="Password" name="password">
+        <input type="password" placeholder="Lozinka" name="password">
     </div>
-    <input class="submit" type="submit" value="Login">
+    <input class="submit" type="submit" value="Prijavi se">
 </form>
 </body>
 </html>

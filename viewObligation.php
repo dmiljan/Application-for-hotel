@@ -29,7 +29,7 @@ while($rowUserHasObligation = mysqli_fetch_assoc($resultUserHasObligation)){
     $resultUser = mysqli_query($connection,$queryUser);
     $rowUser = mysqli_fetch_assoc($resultUser);
     ?>
-    <a href="<?= 'deleteRow.php?id='.$userId.'&id_obligation='.$id_obligation.'&name=user_has_obligation'?>"  style="text-decoration: none; border-radius: 6px " class="btn"><i class="fa fa-trash"></i></a>
+    <a href="<?= 'deleteRow.php?id='.$userId.'&id_obligation='.$id_obligation.'&name=user_has_obligation'?>"  style="text-decoration: none; border-radius: 6px; background: #9e2e2b; " class="btn"><i class="fa fa-trash" style="margin-left: 8px"></i></a>
     <?php
     echo $rowUser['firstname']." ".$rowUser['lastname'];
     ?>

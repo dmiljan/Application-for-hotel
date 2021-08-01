@@ -39,8 +39,13 @@ if(isset($_REQUEST['guestId'])){
 }
 $result = mysqli_query($connection, $query);
 $counter = 0;//prva kolona #
+if(isset($_SESSION['userAdmin']) OR isset($_SESSION['userWorker'])) {
 ?>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pretraži po imenu i prezimenu gosta..">
+<?php
+}
+?>
+
 <table class="table table-hover" id="myTable">
     <thead>
     <tr>
@@ -52,7 +57,13 @@ $counter = 0;//prva kolona #
         <th scope="col">Datum odlaska</th>
         <th scope="col">Naziv smještaja</th>
         <th scope="col">Rezervaciju izvrsio</th>
+        <?php
+        if(isset($_SESSION['userAdmin']) OR isset($_SESSION['userWorker'])) {
+        ?>
         <th scope="col">Akcije</th>
+        <?php
+        }
+        ?>
     </tr>
     </thead>
     <tbody>
@@ -68,7 +79,13 @@ $counter = 0;//prva kolona #
             <td><?= $row['date_departure'] ?></td>
             <td><?= $row['name'] ?></td>
             <td><?= $row['user_firstname']." ".$row['user_lastname'] ?></td>
-            <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name=rezervation'?>" class="btn"><i class="fa fa-trash"></i> </a></td>
+            <?php
+            if(isset($_SESSION['userAdmin']) OR isset($_SESSION['userWorker'])) {//gost ne moze izbrisati rezervaciju
+                ?>
+                <td><a href="<?= 'deleteRow.php?id=' . $row['guest_id'] . '&name=rezervation' ?>" class="btn" style="background: #9e2e2b;"><i class="fa fa-trash"></i> </a></td>
+                <?php
+            }
+            ?>
         </tr>
         <?php
     }

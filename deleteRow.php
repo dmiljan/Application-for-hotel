@@ -33,9 +33,9 @@ switch ($name){
         header("Location: indexAdmin.php?name=tableObligation");
         break;
     case "rezervation":
-        $query = "DELETE FROM `$name` WHERE id='$id'";
+        $query = "DELETE FROM `$name` WHERE guest_id='$id'";
         $result = mysqli_query($connection, $query);
-         header("Location: indexAdmin.php?name=rezervation");
+        header("Location: indexAdmin.php?name=tableRezervation");
         break;
     case "guest":
         $query = "SELECT COUNT(*) AS `count` FROM `rezervation` WHERE guest_id='$id'";

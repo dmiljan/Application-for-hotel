@@ -1,10 +1,13 @@
 <?php
 if($_REQUEST['user_id'] == 2) {
     ?>
-    <label><b>Naziv radnog mjesta</b></label>
-    <input type="text" name="nameWorkspace"><br><br>
-    <label><b>Datum zaposlenja</b></label><br>
-    <input type="date" name="dateEmployment" style="width: 200px"><br><br>
+    <div style="display: flex">
+        <input style="width: 50%; margin-right: 10px;" type="text" name="nameWorkspace" placeholder="Naziv radnog mjesta">
+        <div style="width: 50%">
+            <input  style=" background: #f1f1f1; margin-bottom: 0;" type="date" name="dateEmployment" >
+            <label style="font-size: 12px; margin-top: 0px">Datum zaposlenja</label>
+        </div>
+    </div>
     <?php
 }
 ?>

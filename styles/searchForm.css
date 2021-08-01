@@ -13,6 +13,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
     bottom: 23px;
     right: 28px;
     width: 280px;
+    letter-spacing: 1px;
+    border-radius: 10px;
 }
 
 .form-popup {
@@ -36,6 +38,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
+    border-radius: 10px;
 }
 
 .form-container input[type=text]:focus, .form-container input[type=password], select, input[type=date]:focus {
@@ -44,20 +47,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .form-container .btn {
-    background-color: #4CAF50;
+    /*background-color: #4CAF50;*/
+    background-color: #2789a7;
     color: white;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     width: 100%;
     margin-bottom:10px;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
+    letter-spacing: 2px;
 }
 
 .form-container .cancel {
     background-color: red;
+    background-color: #9e2e2b;
 }
 
 .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
+    opacity: 1.2;
 }

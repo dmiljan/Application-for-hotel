@@ -24,13 +24,13 @@
 <body>
 <form class="obligation" method="post" action="assignObligation_check.php">
     <div class="container">
-        <h1>Dodjeljivanje obaveze</h1>
+        <div class="header"><h1>Dodjeljivanje obaveze</h1></div>
         <hr>
 
-        <label><b>Ime i prezime radnika:</b></label>
+<!--        <label><b>Ime i prezime radnika:</b></label>-->
         <?php include 'selectlistUserWorker.php'; ?><br><br>
 
-        <label><b>Naziv obaveze</b></label>
+<!--        <label><b>Naziv obaveze</b></label>-->
         <?php include 'selectlistObligation.php'; ?>
 
         <hr>
