@@ -37,5 +37,5 @@ if(isset($_REQUEST['nameAccommodation']) and isset($_REQUEST['listTypeAccommodat
     $_SESSION['queryPrice'] = $queryPrice;
     $_SESSION['queryAccommodation'] = $queryAccommodation;
 
-    header("Location:indexAdmin.php?name=upload");
+    header("Location:indexAdmin.php?name=imageAccommodation");
 }

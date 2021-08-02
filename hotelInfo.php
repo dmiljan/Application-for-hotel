@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-    <img src="imageSlide/loginImage.jpg" alt="Notebook" style="width:100%;">
+    <img src="image/login.jpg" alt="Notebook" style="width:100%;">
     <div class="content">
         <?php
         require "connection/connection.php";

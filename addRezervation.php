@@ -18,7 +18,7 @@
     <title>Rezervation</title>
 </head>
 <body>
-<form class="rezervation" method="post" action="rezervation_check.php">
+<form class="rezervation" method="post" action="addRezervation_check.php">
     <div class="container">
        <div class="header">
            <h1>Rezervacija</h1>

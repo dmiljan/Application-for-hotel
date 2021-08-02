@@ -14,40 +14,40 @@ if(!isset($_SESSION['userAdmin']) and !isset($_SESSION['userWorker']) and !isset
 ?>
 <div class="row">
     <div class="column">
-        <img src="galeryImage/1.jpg" alt="Snow" style="width:100%">
+        <img src="imageGallery/1.jpg" alt="Snow" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/2.jpg" alt="Forest" style="width:100%">
+        <img src="imageGallery/2.jpg" alt="Forest" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/3.jpg" alt="Mountains" style="width:100%">
+        <img src="imageGallery/3.jpg" alt="Mountains" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/4.jpg" alt="Snow" style="width:100%">
+        <img src="imageGallery/4.jpg" alt="Snow" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/5.jpg" alt="Forest" style="width:100%">
+        <img src="imageGallery/5.jpg" alt="Forest" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/6.jpg" alt="Mountains" style="width:100%">
+        <img src="imageGallery/6.jpg" alt="Mountains" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/7.jpg" alt="Snow" style="width:100%">
+        <img src="imageGallery/7.jpg" alt="Snow" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/8.jpg" alt="Forest" style="width:100%">
+        <img src="imageGallery/8.jpg" alt="Forest" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/9.jpg" alt="Mountains" style="width:100%">
+        <img src="imageGallery/9.jpg" alt="Mountains" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/10.jpg" alt="Snow" style="width:100%">
+        <img src="imageGallery/10.jpg" alt="Snow" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/11.jpg" alt="Forest" style="width:100%">
+        <img src="imageGallery/11.jpg" alt="Forest" style="width:100%">
     </div>
     <div class="column">
-        <img src="galeryImage/12.jpg" alt="Mountains" style="width:100%">
+        <img src="imageGallery/12.jpg" alt="Mountains" style="width:100%">
     </div>
 </div>
 </body>

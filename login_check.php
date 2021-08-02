@@ -25,7 +25,7 @@ SQL;
 
     if(mysqli_num_rows($resultUser) > 0){
         $row = mysqli_fetch_assoc($resultUser);
-        $_SESSION['user'] = $row;// ova sesija se koristi za fajl rezervation_check.php
+        $_SESSION['user'] = $row;// ova sesija se koristi za fajl addRezervation_check.php
         if($row['user_type_id'] == 1){
             $_SESSION['userAdmin'] = $row;
             header("Location: indexAdmin.php?name=hotelInfo");
@@ -35,7 +35,7 @@ SQL;
         }
     }else if (mysqli_num_rows($resultGuest) > 0){
         $row = mysqli_fetch_assoc($resultGuest);
-        $_SESSION['user'] = $row;// ova sesija se koristi za fajl rezervation_check.php
+        $_SESSION['user'] = $row;// ova sesija se koristi za fajl addRezervation_check.php
         $_SESSION['userGuest'] = $row;
         header("Location: indexAdmin.php?name=hotelInfo");
     } else{
