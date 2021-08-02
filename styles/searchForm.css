@@ -1,7 +1,9 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-
-* {box-sizing: border-box;}
-
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 .open-button {
     background-color: #555;
     color: white;
@@ -16,7 +18,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
     letter-spacing: 1px;
     border-radius: 10px;
 }
-
 .form-popup {
     display: none;
     position: fixed;
@@ -25,13 +26,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     border: 3px solid #f1f1f1;
     z-index: 9;
 }
-
 .form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
 }
-
 .form-container input[type=text], .form-container input[type=password], select, input[type=date] {
     width: 100%;
     padding: 15px;
@@ -40,14 +39,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     background: #f1f1f1;
     border-radius: 10px;
 }
-
 .form-container input[type=text]:focus, .form-container input[type=password], select, input[type=date]:focus {
     background-color: #ddd;
     outline: none;
 }
-
 .form-container .btn {
-    /*background-color: #4CAF50;*/
     background-color: #2789a7;
     color: white;
     padding: 16px 20px;
@@ -55,15 +51,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
     cursor: pointer;
     width: 100%;
     margin-bottom:10px;
-    /*opacity: 0.8;*/
     letter-spacing: 2px;
 }
-
 .form-container .cancel {
     background-color: red;
     background-color: #9e2e2b;
 }
-
 .form-container .btn:hover, .open-button:hover {
     opacity: 1.2;
 }

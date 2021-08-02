@@ -1,6 +1,8 @@
 <?php
-
 if($_SESSION['counter'] <= 6){
+    session_start();
+    require "connection/connection.php";
+
     $target_dir = "upload/";
     $target_file = $target_dir.basename($_FILES['file']['name']);
 
@@ -8,8 +10,6 @@ if($_SESSION['counter'] <= 6){
         $status = 1;
     }
 
-    require "connection/connection.php";
-    session_start();
     $id_accommodation = $_SESSION['id_accommodation'];
     $_SESSION['counter'] += 1;
 

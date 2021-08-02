@@ -1,5 +1,6 @@
 <?php
 require "connection/connection.php";
+
 $id = $_GET['id'];
 $name = $_GET['name'];
 
@@ -20,6 +21,7 @@ switch ($name){
 
             $query = "DELETE FROM `$name` WHERE id='$id'";
             $result = mysqli_query($connection, $query);
+
             header("Location: tableAccommodation.php");
         }
         break;
@@ -35,6 +37,7 @@ switch ($name){
     case "rezervation":
         $query = "DELETE FROM `$name` WHERE guest_id='$id'";
         $result = mysqli_query($connection, $query);
+
         header("Location: indexAdmin.php?name=tableRezervation");
         break;
     case "guest":
@@ -47,6 +50,7 @@ switch ($name){
         } else {
             $query = "DELETE FROM `$name` WHERE id='$id'";
             $result = mysqli_query($connection, $query);
+
             header("Location: indexAdmin.php?name=tableGuestUser&userTypeId=3");
         }
         break;
@@ -72,7 +76,7 @@ switch ($name){
         $id_user = $id;
         $id_obligation = $_GET['id_obligation'];
 
-        $query="DELETE FROM `$name` WHERE user_id='$id_user' AND obligation_id='$id_obligation'";//
+        $query="DELETE FROM `$name` WHERE user_id='$id_user' AND obligation_id='$id_obligation'";
         $result = mysqli_query($connection, $query);
 
         header("Location: indexAdmin.php?name=tableObligation");

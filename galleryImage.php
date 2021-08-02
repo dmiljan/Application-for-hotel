@@ -5,8 +5,7 @@
     <link rel="stylesheet" href="styles/galleryImage.css">
 </head>
 <body>
-
-<?php //posto se ova strnica koristi na dva mjesta, button je nekad potreban a nekad ne
+<?php //posto se ova stranica koristi na dva mjesta, button je nekad potreban a nekad ne
 if(!isset($_SESSION['userAdmin']) and !isset($_SESSION['userWorker']) and !isset($_SESSION['userGuest'])) {
     ?>
     <button type="button" class="btn" id="btnHome"><i class="fa fa-home"></i> Početna</button>
@@ -23,7 +22,6 @@ if(!isset($_SESSION['userAdmin']) and !isset($_SESSION['userWorker']) and !isset
     <div class="column">
         <img src="galeryImage/3.jpg" alt="Mountains" style="width:100%">
     </div>
-
     <div class="column">
         <img src="galeryImage/4.jpg" alt="Snow" style="width:100%">
     </div>
@@ -33,7 +31,6 @@ if(!isset($_SESSION['userAdmin']) and !isset($_SESSION['userWorker']) and !isset
     <div class="column">
         <img src="galeryImage/6.jpg" alt="Mountains" style="width:100%">
     </div>
-
     <div class="column">
         <img src="galeryImage/7.jpg" alt="Snow" style="width:100%">
     </div>
@@ -43,7 +40,6 @@ if(!isset($_SESSION['userAdmin']) and !isset($_SESSION['userWorker']) and !isset
     <div class="column">
         <img src="galeryImage/9.jpg" alt="Mountains" style="width:100%">
     </div>
-
     <div class="column">
         <img src="galeryImage/10.jpg" alt="Snow" style="width:100%">
     </div>
@@ -54,9 +50,7 @@ if(!isset($_SESSION['userAdmin']) and !isset($_SESSION['userWorker']) and !isset
         <img src="galeryImage/12.jpg" alt="Mountains" style="width:100%">
     </div>
 </div>
-
 </body>
-
 <script>
     var btn = document.getElementById('btnHome');
     btn.addEventListener('click', function () {

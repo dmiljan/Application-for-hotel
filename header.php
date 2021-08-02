@@ -13,9 +13,7 @@ if(isset($_COOKIE['notification'])){
 ?>
 <style>
     .notification{
-        /*border-radius: 5px;*/
         border: 1px solid #b13614;
-        /*background-color: rgba(242, 74, 24, 0.71);*/
         background: #9e2e2b;
         color: white;
         letter-spacing: 1px;

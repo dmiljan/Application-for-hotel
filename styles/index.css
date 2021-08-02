@@ -2,33 +2,22 @@
     height: 10vh !important;
     margin: 0 !important;
 }
-
 .collapse ul{
-    margin: auto !important;
-}
-
+    margin: auto !important;}
 .collapse ul li a{
     display: block !important;
 }
-
 .collapse ul li a:hover{
     background-color: gray !important;
     color: white !important;
 }
-
 ul li{
     padding-left: 15px !important;
 }
-
 .phone{
     display: inline-block;
 }
-
 .email{
     display: inline-block;
     padding-left: 15px;
 }
-
-
-
-

@@ -10,25 +10,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!--    Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="styles/table.css">
-
     <title>Document</title>
 </head>
 <body>
-
 <?php
-$userTypeId = $_GET['userTypeId'];
-
-$counter = 0;
 require "connection/connection.php";
 require 'header.php';
+
+$userTypeId = $_GET['userTypeId'];
+$counter = 0;
+
 if($userTypeId == 1){
     $queryUserAdmin = "SELECT * FROM `user` WHERE user_type_id=1";
     $result = mysqli_query($connection, $queryUserAdmin);
@@ -39,7 +35,6 @@ if($userTypeId == 1){
     $queryGuest = "SELECT * FROM `guest`";
     $result = mysqli_query($connection, $queryGuest);
 }
-
 ?>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pretraži po imenu i prezimenu..">
 <table class="table table-hover" id="myTable">
@@ -81,7 +76,11 @@ if($userTypeId == 1){
                 $name = "guest";
             }
             ?>
-            <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name='.$name.'&userTypeId='.$userTypeId?>" class="btn" style="background: #9e2e2b;"><i class="fa fa-trash"></i> </a></td>
+            <td>
+                <a href="<?= 'deleteRow.php?id='.$row['id'].'&name='.$name.'&userTypeId='.$userTypeId?>" class="btn" style="background: #9e2e2b;">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </td>
         </tr>
         <?php
     }

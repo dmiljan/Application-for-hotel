@@ -7,11 +7,8 @@
     border: 1px solid #ddd;
     margin-bottom: 12px;
 }
-
 .btn {
-    /*background-color: DodgerBlue;*/
     background-color: #2789a7;
-    /*background-color: #076582;*/
     border: none;
     color: white;
     padding: 12px 16px;
@@ -23,6 +20,3 @@
     background-color: #076582;
     color: white;
 }
-
-
-

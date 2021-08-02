@@ -1,7 +1,6 @@
 body {
      font-family: "Lato", sans-serif;
 }
-
 .sidenav {
     height: 100%;
     width: 215px;
@@ -9,28 +8,19 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    /*background-color: #111;*/
-    /*background-color: dodgerblue;*/
     overflow-x: hidden;
     padding-top: 20px;
-
     background-image: url(../imageSlide/backgroud.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
-    /*font-size: 15px;*/
 }
-
 a {
     text-decoration: none;!important;
 }
-
 .sidenav a, .dropdown-btn {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    /*font-size: 20px;*/
     font-size: 18px;
-    /*color: #818181;*/
     color: #e0dede;
     display: block;
     border: none;
@@ -41,54 +31,38 @@ a {
     outline: none;
     transition: color .2s linear;
 }
-
 .sidenav a:hover, .dropdown-btn:hover {
     color: #9fadb1;
 }
-
 .main {
     margin-left: 207px;
     font-size: 20px;
     padding: 0px 10px;
-    /*width: 100%;*/
-    /*justify-content: center;*/
-    /*align-content: center;*/
 }
-
 .active {
-    /*background-color: green;*/
     color: white;
     background-color: dodgerblue;
 }
-
 .dropdown-container {
     display: none;
-    /*background-color: #262626;*/
-    /*background-color: #1f596b;*/
     background-color: #396d7d;
     padding-left: 8px;
 }
-
 .fa-caret-down {
     float: right;
     padding-right: 8px;
 }
-
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-
 .user-panel {
     padding: 10px;
-    /*border: 2px solid dodgerblue;*/
-    /*border-radius: 10px;*/
     width: 90%;
     text-align: center;
     margin-left: 5px;
 
 }
-
 i {
     width: 25px;
 }

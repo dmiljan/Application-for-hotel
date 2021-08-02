@@ -6,7 +6,12 @@
 
 <?php
 require "connection/connection.php";
-$query = "SELECT * FROM `user` WHERE user_type_id = '2'";
+
+$query = <<<SQL
+    SELECT * 
+    FROM user 
+    WHERE user_type_id = '2'
+SQL;
 $result = mysqli_query($connection, $query);
 ?>
 

@@ -1,21 +1,19 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial;
     font-size: 17px;
     margin: 0;
 }
-
 .container {
     position: relative;
     width: 100%;
     margin: 0 auto;
 }
-
-.container img {vertical-align: middle;}
-
+.container img {
+    vertical-align: middle;
+}
 .container .content {
     position: absolute;
     bottom: 0;
@@ -25,7 +23,6 @@ body {
     width: 100%;
     padding: 20px;
 }
-
 .btn {
     background-color: DodgerBlue;
     border: none;
@@ -35,7 +32,6 @@ body {
     cursor: pointer;
     border-radius: 10px;
 }
-
 .btn:hover {
     background-color: RoyalBlue;
 }

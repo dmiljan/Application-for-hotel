@@ -3,7 +3,6 @@
 //    header("Location: login.php");
 //}
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,19 +10,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" href="styles/viewImage.css">
-
-    <title>Document</title>
-    <script>
-        function myFunction(imgs) {
-            var expandImg = document.getElementById("expandedImg");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = imgs.src;
-            imgText.innerHTML = imgs.alt;
-            expandImg.parentElement.style.display = "block";
-        }
-    </script>
     <style>
         .image{
             display:flex;
@@ -35,15 +22,19 @@
             width: 630px !important;
         }
     </style>
+    <title>Document</title>
 </head>
 <body>
 <?php
 require "connection/connection.php";
 
-$queryImage = "SELECT * FROM `image` WHERE image.accommodation_id=$accommodation_id";
+$queryImage = <<<SQL
+    SELECT * 
+    FROM `image` 
+    WHERE image.accommodation_id=$accommodation_id
+SQL;
 $resultImage = mysqli_query($connection, $queryImage);
 ?>
-
 <div class="table" style="display: inline">
     <div class="row" style="display: inline-block;">
         <?php
@@ -60,4 +51,13 @@ $resultImage = mysqli_query($connection, $queryImage);
     <div id="imgtext"></div>
 </div>
 </body>
+<script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
 </html>

@@ -3,14 +3,18 @@
 //    header("Location: login.php");
 //}
 ?>
-
 <link rel="stylesheet" href="styles/viewAccommodation.css">
-
 <?php
+require "connection/connection.php";
+
 $accommodation_id = $_GET['accommodationId'];
 
-require "connection/connection.php";
-$query = "SELECT * FROM `accommodation` JOIN `price` ON accommodation.price_id=price.id WHERE accommodation.id=$accommodation_id";
+$query = <<<SQL
+    SELECT * 
+    FROM `accommodation` 
+    JOIN `price` ON accommodation.price_id=price.id 
+    WHERE accommodation.id=$accommodation_id
+SQL;
 $result = mysqli_query($connection, $query);
 $row = mysqli_fetch_assoc($result);
 ?>

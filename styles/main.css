@@ -1,13 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     width: 97%;
     margin-left: 20px;
 }
-* {
-    box-sizing: border-box;
-}
-
 .container {
     padding: 10px;
     background-color: white;
@@ -16,7 +15,6 @@ input[type=text], input[type=password], input[type=date], select, input[type=dat
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
-    /*margin: 5px 0 10px 0;*/
     display: inline-block;
     border: none;
     background: #f1f1f1;
@@ -33,10 +31,7 @@ h1 {
 }
 hr {
     border: 1px solid #f1f1f1;
-    /*border: 1px solid dodgerblue;*/
 }
-
-
 .registerbtn, .rezervationbtn, .obligationbtn {
     height: 50px;
     width: 20%;
@@ -47,34 +42,24 @@ hr {
     font-weight: 600;
     border-radius: 10px;
     letter-spacing: 1px;
-    /*background: dodgerblue;*/
     background: #2789a7;
     margin-left: 915px;
 }
 .registerbtn:hover, .rezervationbtn:hover, .obligationbtn:hover {
-    /*color: dodgerblue;*/
     color: #2789a7;
     background: transparent;
-    /*border: 1px solid dodgerblue;*/
     border: 2px solid #2789a7;
 }
 .button-container{
     display: flex;
-    /*justify-content: center;*/
 }
-
 a {
     color: dodgerblue;
 }
-
 .header {
     width: 100%;
     background: transparent;
-    /*color: dodgerblue; */
     color: #2789a7;
-
     padding: 5px 0 5px 0;
     text-align: center;
-    /*border: 2px solid dodgerblue;*/
-    /*border-radius: 15px 15px 0 0;*/
 }

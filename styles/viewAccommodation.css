@@ -1,14 +1,9 @@
 .info{
     margin-top: 0;
-    /*margin-bottom: 5px;*/
-    /*border: 1px solid deepskyblue;*/
-    /*padding: 10px 0px 10px 0px;*/
 }
-
 label{
     padding: 10px;
 }
-
 .btnRezervation{
     background: #2789a7;
     color: white;
@@ -21,16 +16,13 @@ label{
     width: 15%;
     display: inline-block;
     font-size: 18px;
-    /*margin: 4px 2px;*/
     transition-duration: 0.4s;
     cursor: pointer;
     margin-left: 10px;
     margin-top: 5px;
 }
-
 .btnRezervation:hover {
     background: transparent;
     color: #2789a7;
     border: 2px solid #2789a7;
 }
-

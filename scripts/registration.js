@@ -9,7 +9,6 @@ function loadFields(userId){
     xhr.send();
 }
 
-
 window.onload = function (ev) {
     divFields = document.getElementById('fields');
 }

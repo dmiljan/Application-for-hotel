@@ -1,9 +1,9 @@
 <?php
 if(isset($_REQUEST['dateArrival']) and isset($_REQUEST['dateDeparture'])){
+    require "connection/connection.php";
+
     $dateArrival = $_REQUEST['dateArrival'];
     $dateDeparture = $_REQUEST['dateDeparture'];
-
-    require "connection/connection.php";
 
     $innerQuery = <<<SQL
     SELECT rezervation.accommodation_id 
@@ -28,7 +28,6 @@ SQL;
         WHERE $whereCondition
         GROUP BY accommodation.id, accommodation.name
 SQL;
-
     $result = mysqli_query($connection, $query);
     ?>
     <select style=" background: #f1f1f1;" name="accommodationList" class="chosen" onselect="<?php  ?>">

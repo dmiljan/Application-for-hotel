@@ -1,18 +1,30 @@
 <?php
 if(isset($_REQUEST['email']) and isset($_REQUEST['password'])){
+    session_start();
+    require "connection/connection.php";
+
     $email = $_REQUEST['email'];
     $password = $_REQUEST['password'];
+    $md5Password = md5($password);
 
-    require "connection/connection.php";
-    $queryUser = "SELECT * FROM user WHERE email='".$email."' AND password ='".md5($password)."'; ";
+    $queryUser = <<<SQL
+        SELECT * 
+        FROM user 
+        WHERE email='$email' 
+        AND password='$md5Password'
+SQL;
     $resultUser = mysqli_query($connection, $queryUser);
 
-    $queryGuest = "SELECT * FROM guest WHERE email='".$email."' AND password ='".md5($password)."'; ";
+    $queryGuest =  <<<SQL
+        SELECT * 
+        FROM guest 
+        WHERE email='$email' 
+        AND password ='$md5Password'
+SQL;
     $resultGuest = mysqli_query($connection, $queryGuest);
 
     if(mysqli_num_rows($resultUser) > 0){
         $row = mysqli_fetch_assoc($resultUser);
-        session_start();
         $_SESSION['user'] = $row;// ova sesija se koristi za fajl rezervation_check.php
         if($row['user_type_id'] == 1){
             $_SESSION['userAdmin'] = $row;
@@ -23,7 +35,6 @@ if(isset($_REQUEST['email']) and isset($_REQUEST['password'])){
         }
     }else if (mysqli_num_rows($resultGuest) > 0){
         $row = mysqli_fetch_assoc($resultGuest);
-        session_start();
         $_SESSION['user'] = $row;// ova sesija se koristi za fajl rezervation_check.php
         $_SESSION['userGuest'] = $row;
         header("Location: indexAdmin.php?name=hotelInfo");

@@ -10,20 +10,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" href="styles/indexAdmin.css"><!--  css od indexAdmin zbog komplikacija opisanih ispod-->
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> <!--  za ikonicu smece-->
-
-    <!--    Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script> <!--    stavljeno radi ikonice kruga za online u sideNavigation.php, ovo je moralo u ovom fajlu zbog drugacijeg prikazivanja ovog fajla u odnosu na ostale-->
-
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> <!-- stavljeno radi ikonice kruga za online u sideNavigation.php, ovo je moralo u ovom fajlu zbog drugacijeg prikazivanja ovog fajla u odnosu na ostale-->
     <link rel="stylesheet" href="styles/table.css">
-
     <title>Document</title>
 </head>
 <body>
@@ -34,11 +28,11 @@ include 'sideNavigation.php';
 
 $query = "SELECT * FROM `accommodation`";
 
-if(isset($_REQUEST['typeAccList']) and isset($_REQUEST['dateArrival']) and isset($_REQUEST['dateDeparture']) and isset($_REQUEST['priceFrom']) and isset($_REQUEST['priceTo'])){
+if(isset($_REQUEST['typeAccList']) and isset($_REQUEST['dateArrival']) and isset($_REQUEST['dateDeparture'])
+    and isset($_REQUEST['priceFrom']) and isset($_REQUEST['priceTo'])){
+
     $dateArrival = $_REQUEST['dateArrival'];
     $dateDeparture = $_REQUEST['dateDeparture'];
-
-    require "connection/connection.php";
 
     $innerQuery = <<<SQL
     SELECT rezervation.accommodation_id 
@@ -95,7 +89,6 @@ $counter = 0;
             }
             ?>
             <th scope="col"> </th>
-
         </tr>
         </thead>
         <tbody>
@@ -119,11 +112,17 @@ $counter = 0;
                 }
                 if(isset($_SESSION['userAdmin'])){
                 ?>
-                     <td><a href="<?= 'deleteRow.php?id='.$row['id'].'&name=accommodation'?>" class="btn" style="background: #9e2e2b;" ><i class="fa fa-trash"></i> </a></td>
+                     <td>
+                         <a href="<?= 'deleteRow.php?id='.$row['id'].'&name=accommodation'?>" class="btn" style="background: #9e2e2b;">
+                             <i class="fa fa-trash"></i>
+                         </a>
+                     </td>
                 <?php
                 }
                 ?>
-                <td><a href="<?='indexAdmin.php?name=viewAccommodation&accommodationId='.$row['id']?>" class="btn">Detaljno</a></td>
+                <td>
+                    <a href="<?='indexAdmin.php?name=viewAccommodation&accommodationId='.$row['id']?>" class="btn">Detaljno</a>
+                </td>
             </tr>
             <?php
         }

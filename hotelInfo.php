@@ -10,17 +10,20 @@
     <img src="imageSlide/loginImage.jpg" alt="Notebook" style="width:100%;">
     <div class="content">
         <?php
+        require "connection/connection.php";
+
         if(!isset($_SESSION['userAdmin']) and !isset($_SESSION['userWorker']) and !isset($_SESSION['userGuest'])) {
             ?>
             <button type="button" class="btn" id="btnHome"><i class="fa fa-home"></i> Početna</button>
             <?php
         }
-        require "connection/connection.php";
-        $query = "SELECT * FROM `hotel`";
+        $query = <<<SQL
+            SELECT * 
+            FROM `hotel`
+SQL;
         $result = mysqli_query($connection, $query);
         $row = mysqli_fetch_assoc($result)
         ?>
-        <span></span>
         <h1>O hotelu</h1>
         <p>
             Hotel Jadran smješten je u centru Budve u starom dijelu grada, popularno nazvanom “Hanište”.
@@ -33,14 +36,13 @@
             echo $row['address'];
             ?>
             <br>
-            Telefon: +387 65 222-222<br>
-            Fax: +387 51 217-222<br>
+            Telefon: +387 65 222-222 <br>
+            Fax: +387 51 217-222 <br>
             Email: recepcija@hotel-jadran.com
         </p>
     </div>
 </div>
 </body>
-
 <script>
     var btn = document.getElementById('btnHome');
     btn.addEventListener('click', function () {

@@ -6,7 +6,11 @@
 
 <?php
 require "connection/connection.php";
-$query = "SELECT * FROM `obligation`";
+
+$query = <<<SQL
+    SELECT * 
+    FROM obligation
+SQL;
 $result = mysqli_query($connection, $query);
 ?>
 
